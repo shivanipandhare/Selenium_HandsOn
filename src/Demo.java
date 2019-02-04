@@ -14,9 +14,9 @@ public class Demo {
 		driver.get("https://phptravels.org/clientarea.php");
 		
 		
-		//login
-		driver.findElement(By.id("inputEmail")).sendKeys("abc@email.com");
+		//Code for LOGIN 
 		
+		driver.findElement(By.id("inputEmail")).sendKeys("abc@email.com");		
 		driver.findElement(By.id("inputPassword")).sendKeys("password");
 		
 		driver.findElement(By.xpath("//*[@id=\'login\']")).click();
@@ -25,6 +25,8 @@ public class Demo {
 		
 		if(error != null) {
 			
+			//Code to REGISTER 
+			
 			driver.findElement(By.linkText("Register")).click();
 	
 			driver.findElement(By.id("inputFirstName")).sendKeys("Shivani");
@@ -32,9 +34,16 @@ public class Demo {
 			driver.findElement(By.id("inputEmail")).sendKeys("shivani@email.com");
 			//driver.findElement(By.xpath("//div[@class='selected-dial-code']")).sendKeys("+91");
 			
+			//to enter the phone number 
+			driver.findElement(By.xpath("//div[@class='iti-arrow']")).click();
+			driver.findElement(By.xpath("//li[@data-dial-code='91']")).click();
+			
+			driver.findElement(By.xpath("//input[@id='inputPhone']")).sendKeys("8329873347");
+			
+	
 			
 		}
-		//regiter
+	
 		
 		
 		//driver.close(); 
