@@ -21,6 +21,7 @@ public class Methods {
 		driver.findElement(By.id("inputPassword")).sendKeys("password");
 
 		driver.findElement(By.xpath("//*[@id=\'login\']")).click();
+		
 
 		String error = driver.findElement(By.cssSelector(
 				"#main-body > div > div > div.col-xs-12.main-content > div > div.alert.alert-danger.text-center"))
