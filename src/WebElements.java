@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class WebElements {
 
@@ -97,6 +98,73 @@ public class WebElements {
 		
 		}
 		 */
+		
+		
+		//ALERTS - Type : Java 
+		
+		/* {
+		 	
+		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php"); //URL 
+		
+		driver.findElement(By.xpath("//input[@value='Confirmation Alert']")).click();
+		Thread.sleep(2000);
+		driver.switchTo().alert().accept();
+		 
+		 }  */
+		
+		
+		//CHECKBOXES
+		/* { 
+		 driver.get("https://www.spicejet.com/"); //URL 
+		
+		//select the checkbox
+		driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).click(); //REGEX used 
+		
+		//check if it is selected
+		boolean val =driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected();
+		System.out.println(val);
+		
+		//print number of checkboxes 
+		int num = driver.findElements(By.xpath("//input[@type='checkbox']")).size();
+		System.out.println(num);
+		
+		} */
+		
+		
+		//CALENDAR
+		
+		/* {
+		
+		driver.get("https://www.spicejet.com/"); //URL 
+		
+		driver.findElement(By.cssSelector(".ui-datepicker-trigger")).click();
+		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
+			
+		//it is selecting only the current date (which is highlighted in the calendar)
+		 
+		}*/
+		
+		
+		//Validation of UI elements to be ENABLED or DISABLED
+		/*   
+		{
+		driver.get("https://www.spicejet.com/"); //URL 
+		
+		//System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled());
+		
+		if(driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
+		{
+			System.out.println("Disabled");
+		}
+		
+		driver.findElement(By.xpath("//input[@value='RoundTrip']")).click();
+		
+		//System.out.println("Disabled");
+		Assert.assertTrue(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"));
+			  
+		  
+		 }
+		  */
 		
 		
 	}

@@ -1,8 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
-public class Practise {
+public class E2ETesting {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -10,11 +11,8 @@ public class Practise {
 		System.setProperty("webdriver.chrome.driver","D:\\\\Selenium\\\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php"); //URL 
 		
-		driver.findElement(By.xpath("//input[@value='Confirmation Alert']")).click();
-		Thread.sleep(2000);
-		driver.switchTo().alert().accept();
+		
 		
 	}
 
